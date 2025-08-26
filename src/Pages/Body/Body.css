@@ -1,0 +1,148 @@
+.wrapper {
+  display: flex;
+  border-radius: 12px;
+  width: 85%;
+  margin: 0 auto;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text-box {
+  margin: 100px 50px;
+  flex: 1;
+}
+
+.text-box h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.text-box p {
+  font-size: 1.2rem;
+}
+
+.check-list {
+  margin-top: 30px;
+  margin-left: 15px;
+  line-height: 30px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.email-container {
+  margin-top: 50px;
+}
+.email-container form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.email-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.email-container button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: hsl(235, 18%, 26%);
+  transition: background-color 0.3s ease;
+}
+
+.email-container button:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+.background {
+  margin: 30px 30px 30px 0px;
+  flex: 1;
+}
+
+.background img.desktop {
+  display: block;
+}
+
+.background img.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text-box {
+    margin: 50px 20px;
+  }
+  .email-container form {
+    flex-direction: column;
+  }
+
+  .features li {
+    align-items: first baseline;
+  }
+  .background {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    order: -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .background img.desktop {
+    display: none;
+  }
+
+  .background img.mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .text-box {
+    margin: 50px 20px;
+    text-align: left;
+  }
+
+  .text-box h1 {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+  .email-container form {
+    flex-direction: column;
+  }
+  .background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .background img {
+    width: 90%;
+    height: auto;
+  }
+}
